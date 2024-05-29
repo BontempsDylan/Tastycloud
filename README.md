@@ -1,6 +1,6 @@
-# tastycloud
+# Tastycloud
 
-This template should help get you started developing with Vue 3 in Vite.
+Projet de démonstration utilisant Vue 3 et Vite.
 
 ## Recommended IDE Setup
 
@@ -8,7 +8,16 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- [npm](https://www.npmjs.com/get-npm) (version 6 ou supérieure)
+- See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+### Clone Git Repository
+
+```sh
+git clone https://github.com/BontempsDylan/Tastycloud
+cd Tastycloud
+```
 
 ## Project Setup
 
