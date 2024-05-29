@@ -9,6 +9,7 @@
             <h2>Nos Plats</h2>
             <ProductList :products="plats" />
         </section>
+        <FooterComponent />
     </div>
 </template>
   
@@ -17,6 +18,7 @@ import HeaderComponent from '@/components/Header.vue';
 import NavbarComponent from '@/components/NavBar.vue';
 import BannerComponent from '@/components/Banner.vue'
 import ProductList from '@/components/ProductList.vue';
+import FooterComponent from '@/components/Footer.vue';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -25,7 +27,8 @@ components: {
     HeaderComponent,
     NavbarComponent,
     BannerComponent,
-    ProductList
+    ProductList,
+    FooterComponent
 },
 computed: {
     ...mapGetters(['plats'])

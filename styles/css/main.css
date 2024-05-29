@@ -38,10 +38,6 @@ button {
   color: #F8F8F8;
 }
 
-.section-secondary {
-  background-color: #A9A9A9;
-}
-
 .text-important {
   color: #000000;
 }
@@ -276,6 +272,37 @@ button {
   .banner__hero__texte p {
     min-width: 350px;
   }
+}
+
+.footer {
+  margin-top: 25px;
+  padding: 20px 0;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 40px;
+}
+.footer p {
+  margin: 0;
+}
+.footer nav {
+  background-color: #1C1C3C;
+}
+.footer nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+.footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer nav ul li a:hover {
+  text-decoration: underline;
 }
 
 .product-list {

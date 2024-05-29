@@ -15,6 +15,7 @@
       <p>Nos suggestions pour vous</p>
       <ProductList :products="temptations"  />
     </section>
+    <FooterComponent />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import HeaderComponent from '@/components/Header.vue'
 import NavbarComponent from '@/components/NavBar.vue'
 import BannerComponent from '@/components/Banner.vue'
 import ProductList from '@/components/ProductList.vue';
+import FooterComponent from '@/components/Footer.vue';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -31,7 +33,8 @@ export default {
     HeaderComponent,
     NavbarComponent,
     BannerComponent,
-    ProductList
+    ProductList,
+    FooterComponent
   },
   computed: {
     ...mapGetters(['allProducts', 'getRandomProducts']),
