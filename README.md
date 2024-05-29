@@ -2,33 +2,36 @@
 
 Projet de démonstration utilisant Vue 3 et Vite.
 
-## Installation
+## Recommended IDE Setup
 
-### Prérequis
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Customize configuration
 
 - [Node.js](https://nodejs.org/) (version 14 ou supérieure)
 - [npm](https://www.npmjs.com/get-npm) (version 6 ou supérieure)
+- See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-### Cloner le dépôt
+### Clone Git Repository
 
 ```sh
 git clone https://github.com/BontempsDylan/Tastycloud
 cd Tastycloud
 ```
 
-## Installer les dépendances
+## Project Setup
 
 ```sh
 npm install
 ```
 
-### Démarrage du projet
+### Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
-### Production
+### Compile and Minify for Production
 
 ```sh
 npm run build
