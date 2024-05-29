@@ -7,9 +7,16 @@
     @media screen and (max-width:677px) {
         padding-left: 20px;
     }
-    a {
-        padding-right: 15px;
-        font-size: 18px;
-        text-decoration: none;
+    ul {
+        display: flex;
+        margin: 0;
+        li{
+            list-style: none;
+            a {
+                padding-right: 15px;
+                font-size: 18px;
+                text-decoration: none;
+            }
+        }
     }
 }

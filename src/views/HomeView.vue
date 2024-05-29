@@ -34,17 +34,34 @@ export default {
     ProductList
   },
   computed: {
-    ...mapGetters(['allProducts']),
+    ...mapGetters(['allProducts', 'getRandomProducts']),
     suggestions() {
-      return this.getRandomProducts(5);
+      return this.getRandomProducts();
     },
     temptations() {
-      return this.getRandomProducts(5);
+      return this.getRandomProducts();
     }
   },
+  data() {
+    return {
+      randomSuggestions: [],
+      randomTemptations: []
+    };
+  },
+  created() {
+    this.calculateRandomSuggestions();
+    this.calculateRandomTemptations();
+  },
   methods: {
-    getRandomProducts(count) {
-      return this.allProducts.sort(() => 0.5 - Math.random()).slice(0, count);
+    calculateRandomSuggestions() {
+      const allProducts = this.allProducts;
+      const randomIndices = Array.from({ length: 5 }, () => Math.floor(Math.random() * allProducts.length));
+      this.randomSuggestions = randomIndices.map(index => allProducts[index]);
+    },
+    calculateRandomTemptations() {
+      const allProducts = this.allProducts;
+      const randomIndices = Array.from({ length: 5 }, () => Math.floor(Math.random() * allProducts.length));
+      this.randomTemptations = randomIndices.map(index => allProducts[index]);
     }
   }
 };

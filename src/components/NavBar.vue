@@ -1,10 +1,10 @@
 <template>
     <nav id="navbar">
-        <div>
-            <router-link href="/">Acceuil</router-link>
-            <router-link href="/plats">plats<font-awesome-icon :icon="['fas', 'chevron-down']" /></router-link>
-            <router-link href="/desserts">Dessert<font-awesome-icon :icon="['fas', 'chevron-down']" /></router-link>
-        </div>
+        <ul>
+            <li><router-link to="/">Acceuil</router-link></li>
+            <li><router-link to="/Plats">plats<font-awesome-icon :icon="['fas', 'chevron-down']" /></router-link></li>
+            <li><router-link to="/desserts">Dessert<font-awesome-icon :icon="['fas', 'chevron-down']" /></router-link></li>
+        </ul>
     </nav>
 </template>
 
