@@ -10,9 +10,15 @@
             </div>
             <div class="d-flex justify-content-between">
               <p><strong>{{ product.price }}</strong></p>
-              <button>Ajouter</button>
+              <div v-if="productQuantity(product.id) === 0">
+                <button @click="addToCart(product)">Ajouter</button>
+              </div>
+              <div v-else class="d-flex justify-content-between">
+                <button @click="addToCart(product)" class="buttonAjout">+</button>
+                <div class="quantity"><p>{{ productQuantity(product.id) }}</p></div>
+                <button @click="removeFromCart(product.id)" class="buttonSup">-</button>
+              </div>
             </div>
-            
           </div>
         </li>
       </ul>
@@ -20,6 +26,8 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+
 export default {
   name: 'ProductList',
   props: {
@@ -27,6 +35,15 @@ export default {
       type: Array,
       required: true
     }
+  },
+  computed: {
+    ...mapGetters(['getProductQuantity']),
+    productQuantity() {
+      return (id) => this.getProductQuantity(id);
+    }
+  },
+  methods: {
+    ...mapActions(['addToCart', 'removeFromCart'])
   }
 };
 </script>
