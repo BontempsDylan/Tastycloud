@@ -54,12 +54,15 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        width: 600px;
+        position: relative;
         padding-right: 30px;
         @media screen and (max-width:677px) {
             padding-right: 20px;
         }
         button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 22px;
             font-weight: bolder;
             text-decoration: none;
@@ -76,6 +79,79 @@
         @media screen and (max-width:1150px) {
             justify-content: end;
             width: auto;
+        }
+    }
+    .cart-dropdown{
+        position: absolute;
+        top: 130px;
+        right: 0;
+        height: 600px;
+        background: white;
+        border: 1px solid #ddd;
+        padding: 10px;
+        z-index: 11;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        @media screen and (max-width: 490px) {
+            height: 527px;
+        }
+        ul {
+            height: 454px;
+            padding-left: 15px;
+            padding-right: 15px;
+            overflow-y: scroll;
+            @media screen and (max-width: 490px) {
+                height: 386px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .cart-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                width: 421px;
+                @media screen and (max-width: 490px) {
+                    width: 333px;
+                }
+                .cart-item-info {
+                    display: flex;
+                    width: 365px;
+                    @media screen and (max-width: 490px) {
+                        width: 313px;
+                    }
+                    .cart-item-image {
+                        width: 200px;
+                        height: 127px;
+                        margin-right: 10px;
+                        overflow: hidden;
+                        @media screen and (max-width: 490px) {
+                            width: 150px;
+                        }
+                        img {
+                            width: 100%;
+                            min-width: 100%;
+                            min-height: 100%;
+                        }
+                    }
+                    h3 {
+                        color: $color-secondaire-2;
+                    }
+                    p {
+                        color: $color-secondaire-2;
+                    }
+                }
+                .cart-item-actions {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        .cart-summary {
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+            p {
+                color: $color-secondaire-2;
+            }
         }
     }
 }

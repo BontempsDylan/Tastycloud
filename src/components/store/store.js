@@ -43,7 +43,8 @@ export default createStore({
         { id: 18, category: 'dessert', name: 'Macarons', description: 'Assortiment de macarons faits maison', price: '7.00€', image: Macarons },
         { id: 19, category: 'plat', name: 'Gratin Dauphinois', description: 'Pommes de terre gratinées à la crème', price: '8.00€', image: GratinDauphinois },
         { id: 20, category: 'dessert', name: 'Gâteau au Fromage', description: 'Cheesecake onctueux à la vanille', price: '5.50€', image: GateauAuFromage }
-      ]
+      ],
+      cart: []
     },
     getters: {
       allProducts: state => state.products,
@@ -52,6 +53,41 @@ export default createStore({
       getRandomProducts: (state) => () => {
         const shuffledProducts = [...state.products].sort(() => 0.5 - Math.random());
         return shuffledProducts.slice(0, 5);
+      },
+      cart: state => state.cart,
+      cartTotalQuantity: state => state.cart.reduce((total, item) => total + item.quantity, 0),
+      cartTotalPrice: state => state.cart.reduce((total, item) => total + item.quantity * parseFloat(item.price), 0),
+      getProductQuantity: (state) => (productId) => {
+        const product = state.cart.find(item => item.id === productId);
+        return product ? product.quantity : 0;
+      }
+    },
+    mutations: {
+      ADD_TO_CART(state, product) {
+        const cartItem = state.cart.find(item => item.id === product.id);
+        if (cartItem) {
+          cartItem.quantity++;
+        } else {
+          state.cart.push({ ...product, quantity: 1 });
+        }
+      },
+      REMOVE_FROM_CART(state, productId) {
+        const index = state.cart.findIndex(item => item.id === productId);
+        if (index !== -1) {
+          if (state.cart[index].quantity > 1) {
+            state.cart[index].quantity--;
+          } else {
+            state.cart.splice(index, 1);
+          }
+        }
+      }
+    },
+    actions: {
+      addToCart({ commit }, product) {
+        commit('ADD_TO_CART', product);
+      },
+      removeFromCart({ commit }, productId) {
+        commit('REMOVE_FROM_CART', productId);
       }
     }
   });
