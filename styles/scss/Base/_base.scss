@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body, #app {
     margin: 0;
     padding: 0;
     z-index: 0; 
@@ -10,9 +10,6 @@ html, body {
     background-color: $color-principal-1;
     color: $color-principal-2;
     overflow:none;
-    strong {
-        color: rgba(166,105,31,255);
-    }
 }
 
 header, footer {
@@ -20,17 +17,21 @@ header, footer {
     color: $color-principal-1;
 }
 
+nav {
+    background-color: $color-principal-1;
+}
+
 a {
     color: $color-accents-2;
 }
 
 button {
-    background-color: $color-accents-1; /* Bleu Nuit */
-    color: $color-principal-1; /* Blanc Cassé */
+    background-color: $color-accents-1; 
+    color: $color-principal-1; 
 }
 
 .section-secondary {
-    background-color: $color-principal-2; /* Gris Moyen */
+    background-color: $color-principal-2; 
 }
 
 .text-important {
