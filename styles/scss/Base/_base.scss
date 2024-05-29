@@ -6,6 +6,7 @@ html, body, #app {
     margin: 0;
     padding: 0;
     z-index: 0; 
+    width: 100%;
     min-height: 100vh;
     background-color: $color-principal-1;
     color: $color-principal-2;
@@ -50,7 +51,7 @@ button {
     display: flex;
 }
 
-.fle-column {
+.flex-column {
     flex-direction: column;
 }
 
@@ -72,6 +73,10 @@ button {
 
 .justify-content-between {
     justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
 }
 
 .align-items-center {
