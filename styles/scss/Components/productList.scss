@@ -43,14 +43,12 @@
         height: auto;
         margin-right: 7.5px;
         margin-left: 7.5px;
+        margin-top: 15px;
         padding-bottom: 15px;
         border: 1px solid $color-principal-2;
         border-radius: 5px;
         box-shadow: 0px 0px 9px 0px $color-principal-2;
         overflow: hidden;
-        @media screen and (max-width: 1652px) {
-            margin-top: 15px;
-        }
         @media screen and (max-width: 702px) {
             width: 100%;
             min-width: 300px;

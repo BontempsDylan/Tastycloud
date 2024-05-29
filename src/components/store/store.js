@@ -48,6 +48,10 @@ export default createStore({
     getters: {
       allProducts: state => state.products,
       plats: state => state.products.filter(product => product.category === 'plat'),
-      desserts: state => state.products.filter(product => product.category === 'dessert')
+      desserts: state => state.products.filter(product => product.category === 'dessert'),
+      getRandomProducts: (state) => () => {
+        const shuffledProducts = [...state.products].sort(() => 0.5 - Math.random());
+        return shuffledProducts.slice(0, 5);
+      }
     }
   });
