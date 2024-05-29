@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    color: $color-secondaire;
 }
 
 html, body {
@@ -8,11 +7,34 @@ html, body {
     padding: 0;
     z-index: 0; 
     min-height: 100vh;
-    background-color: $color-principal;
+    background-color: $color-principal-1;
+    color: $color-principal-2;
     overflow:none;
     strong {
         color: rgba(166,105,31,255);
     }
+}
+
+header, footer {
+    background-color: $color-accents-1;
+    color: $color-principal-1;
+}
+
+a {
+    color: $color-accents-2;
+}
+
+button {
+    background-color: $color-accents-1; /* Bleu Nuit */
+    color: $color-principal-1; /* Blanc Cassé */
+}
+
+.section-secondary {
+    background-color: $color-principal-2; /* Gris Moyen */
+}
+
+.text-important {
+    color: $color-secondaire-2;
 }
 
 #root {
