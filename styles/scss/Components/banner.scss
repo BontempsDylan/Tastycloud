@@ -1,0 +1,53 @@
+.banner {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    img {
+        
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+    &__hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding-top: 181px;
+        background-color: rgba(0,0,0,0.39);
+        top: 0;
+        img {
+            min-width: 50px;
+            min-height: auto;
+            @media screen and (max-width: 702px) {
+                max-width: 100px;
+            }
+        }
+        &__texte {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                width: 100%;
+                text-align: center;
+                color: white;
+                opacity: 1;
+                @media screen and (max-width: 702px) {
+                    font-size: 20px;
+                }
+            }
+            p {
+                width: 40%;
+                min-width: 531px;
+                font-size: 18px;
+                color: white;
+                @media screen and (max-width: 702px) {
+                    min-width: 350px;
+                }
+            }
+        }
+    }
+}
